@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+html{
+    font-size: 62.5%;
+}
+.main{
+    height: 100%;
+}
+.header{
+    height: 13rem;
+    background-color: rgb(40, 73, 95);
+    font-family: 'Aref Ruqaa', serif;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.header-ndtren{
+    height: 4rem;
+    /* background-color: seagreen; */
+    border-bottom: silver 1px solid;
+    /* display: inline; */
+    color: silver;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.header-ndtren .ndtren-trai{
+    height: 4rem;
+    position: relative;
+}
+.header-ndtren .ndtren-trai p{
+    display: inline;
+    line-height: 4rem;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    margin-right: 1.5rem;
+}
+.header-ndtren .ndtren-trai .bx{
+    position: absolute;
+    top: 1.3rem;
+    font-size: 1.6rem;
+}
+.header-ndtren .ndtren-phai{
+    float: right;
+}
+.header-ndtren .ndtren-phai i{
+    float: right;
+    transition: .5s;
+    cursor: pointer;
+}
+.header-ndtren .ndtren-phai i:hover{
+    color: #fff;
+    transition: .5s;
+}
+.header-ndtren .ndtren-phai .bx{
+    padding: 0 1rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    margin-top: 5px;
+}
+.header-ndtren .ndtren-phai .bxs-cart{
+    border-left: silver .1rem solid;
+    border-right: silver .1rem solid;
+    padding: 0 2rem;
+}
+.header-ndduoi{
+    height: 9rem;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.header-ndduoi .logo{
+    position: relative;
+}
+.header-ndduoi .logo a{
+    color: silver;
+    text-decoration: none;
+    line-height: 9rem;
+    font-size: 2.5rem;
+    margin-left: 4.5rem;
+    font-family: 'The Nautigal', cursive;
+    color: #fff;
+}
+.header-ndduoi .logo .bxs-edit-location{
+    font-size: 4rem;
+    position: absolute;
+    left: 0;
+    top: 2.2rem;
+}
+.header-ndduoi .nav{
+    /* float: left; */
+    list-style-type: none;
+    text-align: center;
+    display: inline-block;
+}
+.nav li{
+    position: relative;
+}
+.nav ul li:hover .subnav{
+    display: block;
+   
+}
+.header-ndduoi .nav ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+.header-ndduoi > .nav > ul > li >a{
+    line-height: 9rem;
+}
+.header-ndduoi > .nav > ul > li:hover >a{
+    color: #fff;
+    transition: .5s;
+}
+.header-ndduoi .nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: silver;
+    padding: 0 2rem;
+    transition: .5s;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+.nav .subnav{
+    position: absolute;
+    display: none;
+    top: 99%;
+    left: 0;
+}
+.subnav ul li a{
+    min-width: 18rem;
+    text-transform: none;
+    line-height: 4.8rem;
+    display: block;
+    background-color: rgb(40, 73, 95);
+    border-top: rgba(243, 227, 227, 0.733) .5px solid;
+    text-align: left;
+}
+.subnav ul li a:hover{
+    color: #fff;
+}
+#menubar i{
+    font-size: 3rem;
+    cursor: pointer;
+    color: silver;
+    border: .1rem solid #666;
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    margin-top: 50%;
+    display: none;
+}
+.slider{
+    padding-top: 50%;
+    background-color: tomato;
+    width: 100%;
+    position: relative;
+    animation: nen 10s infinite;
+}
+@keyframes nen{
+    0%{
+        background-image: url(./images/duong.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    50%{
+        background-image: url(./images/bien.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    75%{
+        background-image: url(./images/nui.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+    }
+    100%{
+        background-image: url(./images/duong.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+}
+.layer2{
+    bottom: 4rem;
+    font-size: 3.5rem;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    width: 100%;
+    margin-left: -50%;
+    color: black;
+    animation: zoom 3s forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+@keyframes zoom{
+    from{ transform: scale(0.1); opacity: 0; top: 30%;}
+    to{ transform: scale(1); opacity: 1; top: 75%;}
+}
+.about{
+    font-family: 'Nunito', sans-serif;
+}
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .row .content{
+    flex:1 1 45rem;
+}
+
+.about .row .content h3{
+    color:var(--black);
+    font-size: 4rem;
+    padding:.5rem 0;
+}
+
+.about .row .content p{
+    color:var(--light-color);
+    font-size: 1.5rem;
+    padding:.5rem 0;
+    line-height: 2;
+}
+
+.about .row .content .icons-container{
+    display: flex;
+    gap:1rem;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    margin-top: .5rem;
+}
+
+.about .row .content .icons-container .icons{
+    background:#eee;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    flex:1 1 17rem;
+    padding:1.5rem 1rem;
+}
+
+.about .row .content .icons-container .icons i{
+    font-size: 2.5rem;
+    color:var(--green);
+}
+
+.about .row .content .icons-container .icons span{
+    font-size: 1.5rem;
+    color:var(--black);
+}
+
+.about .row .content .btn{
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+section{
+    padding:2rem 9%;
+}
+
+section:nth-child(even){
+    background:#eee;
+}
+
+.sub-heading{
+    text-align: center;
+    color:var(--green);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.heading{
+    text-align: center;
+    color:var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:1.8rem 3rem;
+}
+
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+.search{
+    width: 100%;
+    background-color: cornflowerblue;
+    text-align: center;
+    border-radius: 15px;
+    color: #fff;
+    max-width: 35rem;
+}
+.search h2{
+    margin: 5rem 0 2rem 0;
+    font-size: 3rem;
+    font-family: 'The Nautigal', cursive;
+}
+.search h3{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.search input{
+    width: 80%;
+    margin: 1rem;
+    height: 4rem;
+    border-radius: 1rem;
+    border: 2px solid silver;
+    font-size: 1.5rem;
+    font-family: 'Aref Ruqaa', serif;
+}
+input{
+    padding-left: 1.5rem;
+    font-size: 1.8rem;
+}
+.search button{
+    width: 80%;
+    margin: 1rem;
+    height: 4rem;
+    border-radius: 1rem;
+    border: 2px solid silver;
+    font-size: 1.5rem;
+    font-family: 'Aref Ruqaa', serif;
+    background-color: royalblue;
+    color: #fff;
+}
+.search button:hover{
+    background-color: rgb(46, 90, 255);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+    #menubar i{
+        display: inline-block;
+    }
+    .header-ndduoi{
+        position: relative;
+    }
+    .header .nav{
+        display: none;
+        position: absolute;
+        top:95%; left:-5rem; right:-5rem;
+    }
+    .header-ndduoi .nav ul li{
+        width: 100%;
+        list-style-type: none;
+        display: block;
+        background-color: rgb(40, 73, 85);
+        border-top: silver 1px solid;
+        border-bottom: silver 1px solid;
+        height: 7rem;
+    }
+    .header-ndduoi .nav ul li a{
+        line-height: 7rem;
+    }
+    .nav .subnav{
+        display: none;
+    }
+    .layer2{
+        font-size: 2rem;
+    }
+    .search{
+        min-width: 40rem;
+        max-width: 50rem;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}
+    
+
+@media (max-width:768px) {
+    .slider{
+        padding-top: 100%;
+    }
+}
